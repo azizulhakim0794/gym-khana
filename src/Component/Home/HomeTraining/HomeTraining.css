@@ -1,0 +1,11 @@
+.btn-gym-session {
+    width: 268px;
+    font-size: 18px;
+    padding: 8px;
+    border: none;
+    background-color: #ffcd37;
+    cursor: pointer;
+}
+.img-btn {
+    margin-top: -59px;
+}

@@ -1,0 +1,60 @@
+.top-margin.margin-auto {
+    margin-top: 100px;
+}
+.top-margin{
+    margin-top: 100px;
+}
+
+element.style {
+}
+.btn-gym{
+    width: 175px;
+    font-size: 18px;
+    padding: 8px;
+    border: none;
+    background-color: #ffcd37;
+    cursor: pointer;
+}
+.btn-gym:active{
+    color: #000;
+    background-color: #ffcd39;
+    border-color: #ffc720;
+}
+.btn-gym:hover{
+    background-color: #ecbb28;
+}
+.main-bg{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.582) ), url('../../../Image-&-Icon/main-bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    
+
+}
+/* @media only screen and (max-width:400px){
+
+    .main-bg{
+        height:730px !important;
+    
+    }
+}
+@media only screen and (max-width:500px){
+
+    .main-bg{
+        height:700px;
+    
+    }
+}
+
+@media only screen and (max-width:767px){
+
+    .main-bg{
+        height:650px;
+    
+    }
+} */
+.sub-header{
+    filter: brightness(100%)
+}
+.margin-auto {
+    margin: auto;
+}

@@ -1,0 +1,45 @@
+.mid-center {
+    margin-left: 30%;
+}
+.plans-btn{
+    width: 130px;
+    font-size: 16px;
+    padding: 8px;
+    border: none;
+    color: black;
+    cursor: pointer;
+  }
+  .Photo1{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.877) ), url('../../Image-&-Icon/Mask\ Group\ 2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+  .Photo2{
+      background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.877) ), url('../../Image-&-Icon/main-bg.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+
+  }
+  .Photo3{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.877) ), url('../../Image-&-Icon/victor-freitas-604838-unsplash.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+  .plans-btn:hover {
+    background: rgb(238, 172, 49);
+    color: black;
+  }
+  .buy-btn {
+    width: 101px;
+    font-size: 16px;
+    padding: 4px;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+.buy-btn:hover {
+    background: rgb(238, 172, 49);
+    color: black;
+  }

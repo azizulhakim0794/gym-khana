@@ -1,0 +1,16 @@
+img.chooseImg {
+    height: 150px;
+    width: 150px;
+    margin: auto;
+}
+.choose-item {
+    box-shadow: 1px 1px 3px 1px #d2d1d1;
+    border: 1px solid #8080804a;
+}
+.choose-item:hover{
+    border: 1px solid #f1c343
+}
+.choose-item:active{
+    box-shadow: 1px 1px 3px 1px #d2d1d1;
+    border: 1px solid #8080804a;
+}

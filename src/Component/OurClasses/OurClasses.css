@@ -1,0 +1,56 @@
+.main-bg-classes{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.582) ), url('../../Image-&-Icon/main-bg.jpg');
+    background-size: cover;
+    height:600px;
+
+}
+p.margin-auto.h1 {
+    margin-top: 23%;
+}
+img.exercise-image {
+    height: 300px;
+    width: 300px;
+}
+.h-300{
+    height: 300px;
+}
+.exercise-btn {
+    margin-top: -11%;
+}
+@media only screen and (max-width:992px){
+    .btn-gym-session {
+        width: 184px;
+        padding: 6px;
+        border: none;
+        background-color: #ffcd37;
+        cursor: pointer;
+        font-size: 15px;
+    }
+    .exercise-btn {
+        margin-top: -18%;
+    }
+    
+}
+@media only screen and (max-width:767px){
+
+    .main-bg-classes{
+        height:650px;
+    
+    }
+}
+@media only screen and (max-width:400px) {
+    p.margin-auto.h1 {
+        margin-top: 35%;
+    }
+    .main-bg-classes{
+        height:500px;
+    }
+}
+@media only screen and (max-width:500px) {
+    p.margin-auto.h1 {
+        margin-top: 35%;
+    }
+    .main-bg-classes{
+        height:500px;
+    }
+}
