@@ -2,6 +2,7 @@
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.582) ), url('../../Image-&-Icon/main-bg.jpg');
     background-size: cover;
     height:600px;
+    width: 100%;
 
 }
 p.margin-auto.h1 {
@@ -45,6 +46,14 @@ img.exercise-image {
     .main-bg-classes{
         height:500px;
     }
+    .btn-gym-session {
+        width: 144px;
+        padding: 5px;
+        border: none;
+        background-color: #ffcd37;
+        cursor: pointer;
+        font-size: 11px;
+    }
 }
 @media only screen and (max-width:500px) {
     p.margin-auto.h1 {
@@ -52,5 +61,13 @@ img.exercise-image {
     }
     .main-bg-classes{
         height:500px;
+    }
+    .btn-gym-session {
+        width: 144px;
+        padding: 5px;
+        border: none;
+        background-color: #ffcd37;
+        cursor: pointer;
+        font-size: 11px;
     }
 }

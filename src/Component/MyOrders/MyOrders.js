@@ -15,7 +15,6 @@ const MyOrders = () => {
         .then(res => res.json())
         .then(data => setOrders(data))
     },[userData.email])
-    console.log(orders)
     return (
         <div className="container">
             <BlackNav/>
