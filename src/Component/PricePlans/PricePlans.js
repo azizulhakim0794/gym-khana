@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import HomeFooter from '../CommonComponent/HomeFooter/HomeFooter';
 import WhiteNav from '../CommonComponent/WhiteNav/WhiteNav';
 import PricePlansItem from './PricePlansItem';
 import './PricePlans.css'
 import { useHistory } from 'react-router';
-import { UserContext } from '../../App';
+import Loading from '../CommonComponent/Loading/Loading';
+// import { UserContext } from '../../App';
 const plans = [
     {
         id: '01',
@@ -39,7 +40,7 @@ const plans = [
 ]
 const PricePlans = () => {
     const history = useHistory()
-    const [userData, setUserData] = useContext(UserContext)
+    // const [userData, setUserData] = useContext(UserContext)
 
     const handlePayment= (e)=>{
         history.push("/personalInfo/"+e)
@@ -64,11 +65,11 @@ const PricePlans = () => {
                 </div>
             </div>
             <div className="container ">
-                    <div className=" row top-margin margin-auto">
+                   {plans.length ? <div className=" row top-margin margin-auto">
                         {
                             plans.map(data => <PricePlansItem data={data} handlePayment={handlePayment} key={data.id} />)
                         }
-                    </div>
+                    </div> : <Loading/>}
             </div>
             <HomeFooter />
         </div>

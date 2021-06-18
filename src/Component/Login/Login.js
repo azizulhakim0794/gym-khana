@@ -34,7 +34,7 @@ const Login = () => {
                 setUserData(isSignedInGoogle)
 
                 
-                if (userData.emailVerified = true) {
+                if (userData.emailVerified) {
                     history.replace(from);
                     
                 }
@@ -48,6 +48,9 @@ const Login = () => {
                 // The firebase.auth.AuthCredential type that was used.
                 var credential = error.credential;
                 // ...
+                if(errorCode||errorMessage||email||credential){
+                    console.log(errorMessage,errorCode,email,credential);
+                  }
             });
     }
     return (

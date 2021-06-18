@@ -4,6 +4,7 @@ import HomeFooter from '../../CommonComponent/HomeFooter/HomeFooter';
 import WhiteNav from '../../CommonComponent/WhiteNav/WhiteNav';
 import './AllClasses.css'
 import rightSymbol from '../../../Image-&-Icon/checkmark-square-2.png'
+import Loading from '../../CommonComponent/Loading/Loading';
 const AllClasses = () => {
     let { id } = useParams();
     const history = useHistory()
@@ -27,6 +28,7 @@ const AllClasses = () => {
     }
     return (
         <div>
+            {data.training ?<>
             <div className="main-bg-classes">
                 <div className="container text-white">
                     <WhiteNav />
@@ -101,6 +103,7 @@ const AllClasses = () => {
                 </div>
             </div>
             <HomeFooter />
+            </>:<Loading/>}
         </div>
     );
 };

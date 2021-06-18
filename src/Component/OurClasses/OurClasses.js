@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 import HomeFooter from '../CommonComponent/HomeFooter/HomeFooter';
+import Loading from '../CommonComponent/Loading/Loading';
 import WhiteNav from '../CommonComponent/WhiteNav/WhiteNav';
 import './OurClasses.css'
 import OurClassesItem from './OurClassesItem';
@@ -15,7 +16,7 @@ const OurClasses = () => {
             .then(response => response.json())
             .then(data => setData(data))
     }, [])
-    const handleExercise =(e)=>{
+    const handleExercise = (e) => {
         history.push(`/ourClass/${e}`)
     }
     return (
@@ -28,16 +29,16 @@ const OurClasses = () => {
                     </p>
                 </div>
             </div>
-            <div className="container ">
+            {data.length ? <div className="container ">
                 <div className="d-flex justify-content-center ">
                     <div className=" row top-margin">
-                    {
-                    data.map(data => <OurClassesItem data={data} key={data._id} handleExercise={handleExercise}/>)
-                }
+                        {
+                            data.map(data => <OurClassesItem data={data} key={data._id} handleExercise={handleExercise} />)
+                        }
                     </div>
                 </div>
-            </div>
-            <HomeFooter/>
+            </div> : <Loading />}
+            <HomeFooter />
         </div>
     );
 };

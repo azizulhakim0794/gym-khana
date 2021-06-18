@@ -86,7 +86,7 @@ const PersonalForm = () => {
                         </div>
                         <div className="col-md-6">
                             <label className="form-label">Mobile Number</label>
-                            <input onBlur={handleBlur} type="text" name="mobile" className="form-control" required />
+                            <input onBlur={handleBlur} type="text" pattern="[0-1]{1}[0-9]{10}" name="mobile" className="form-control" required />
                         </div>
                         <div className="col-md-6">
                             <label className="form-label">Date of Birth</label>
@@ -112,7 +112,7 @@ const PersonalForm = () => {
                         </div>
                         <div className="col-md-6">
                             <label className="form-label">Zip</label>
-                            <input onBlur={handleBlur} type="text" name="zip" className="form-control" required />
+                            <input onBlur={handleBlur} pattern="[0-9]{1}{2}" type="text" name="zip" className="form-control" required />
                         </div>
                         <div className="col-12">
                             <button className="plans-btn btn-warning" type="submit">Submit form</button>

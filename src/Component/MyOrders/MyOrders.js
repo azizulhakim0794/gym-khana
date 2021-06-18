@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../App';
 import BlackNav from '../CommonComponent/BlackNav/BlackNav';
+import Loading from '../CommonComponent/Loading/Loading';
 import MyOrderList from './MyOrderList';
 
 const MyOrders = () => {
@@ -19,8 +20,8 @@ const MyOrders = () => {
         <div className="container">
             <BlackNav/>
             {userData.email ? <h2 className="text-center my-5">My Orders</h2> : <p className="text-center my-5 h2">You Have to login first</p>}
-           {
-               userData.email &&  orders.map(data => <MyOrderList data={data} key={data._id}/>)
+           { 
+               userData.email &&  (orders.length ? orders.map(data => <MyOrderList data={data} key={data._id}/> ): <Loading/>)
            }
         </div>
     );

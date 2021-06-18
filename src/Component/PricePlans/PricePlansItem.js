@@ -4,7 +4,7 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 const PricePlansItem = ({data,handlePayment}) => {
     return (
-        <div className="col-md-4 col-sm-6 col-6 mt-5">
+        <div className="col-xl-4 col-md-4 col-md col-sm-6 col mt-5">
             <div className={`${data.photoClassName} pt-5 pb-5`}>
             <div className="text-center">
             <p className="text-warning">BUILD MONTHLY</p>

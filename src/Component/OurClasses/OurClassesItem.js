@@ -1,9 +1,10 @@
 import React from 'react';
+import Loading from '../CommonComponent/Loading/Loading';
 
 const OurClassesItem = ({ data ,handleExercise}) => {
     return (
         <div className="col-md-4 col-sm-6 col-6 text-center ">
-            <div className="col">
+            {data.image ? <div className="col">
                 <div className="h-100">
                     <img src={data.image} className="card-img-top h-300" alt="..." />
                    <div className="card-body">
@@ -12,7 +13,7 @@ const OurClassesItem = ({ data ,handleExercise}) => {
                     </div>
                    </div>
                 </div>
-            </div>
+            </div>: <Loading/>}
         </div>
     );
 };
