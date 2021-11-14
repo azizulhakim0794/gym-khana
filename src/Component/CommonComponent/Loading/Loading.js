@@ -2,7 +2,7 @@ import React from 'react';
 
 const Loading = () => {
     return (
-        <div className="m-auto">
+        <div className="loading container">
             <br /><br /><br /><br /><br /><br /><br />
             <div className="mt-5 text-center">
                 <div className="spinner-border text-warning " role="status">

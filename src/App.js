@@ -1,32 +1,30 @@
+import React, { lazy, Suspense,createContext, useState } from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
-import NotFound from './Component/NotFound/NotFound';
-import Home from './Component/Home/Home';
-import Header from './Component/Home/Header/Header';
-import OurClasses from './Component/OurClasses/OurClasses';
-import AllClasses from './Component/OurClasses/AllClasses/AllClasses';
-import PricePlans from './Component/PricePlans/PricePlans';
-import PersonalForm from './Component/PaymentProcess/PersonalForm/PersonalForm';
-import { createContext, useState } from 'react';
-import Login from './Component/Login/Login';
-import PrivateRoute from './Component/Login/PrivateRoute/PrivateRoute';
-import MyOrders from './Component/MyOrders/MyOrders';
+import Loading from './Component/CommonComponent/Loading/Loading';
+const Login = lazy(() => import('./Component/Login/Login'));
+const PricePlans = lazy(() => import('./Component/PricePlans/PricePlans'));
+const MyOrders = lazy(()=>import('./Component/MyOrders/MyOrders'))
+const PrivateRoute = lazy(()=>import('./Component/Login/PrivateRoute/PrivateRoute'))
+const PersonalForm = lazy(()=>import('./Component/PaymentProcess/PersonalForm/PersonalForm'))
+const AllClasses = lazy(()=> import('./Component/OurClasses/AllClasses/AllClasses'))
+const OurClasses = lazy(()=> import('./Component/OurClasses/OurClasses'))
+const Home = lazy(()=> import('./Component/Home/Home'))
+const NotFound = lazy(()=> import('./Component/NotFound/NotFound'))
 export const UserContext = createContext()
 function App() {
   const [userData, setUserData] = useState({})
   return (
+    <Suspense fallback={<Loading/>}>
     <UserContext.Provider value={[userData, setUserData]}>
       <Router>
         <Switch>
           <Route exact path="/">
             <Home />
-          </Route>
-          <Route path="/header">
-            <Header />
           </Route>
           <Route path="/home">
             <Home />
@@ -54,8 +52,8 @@ function App() {
           </Route>
         </Switch>
       </Router>
-
     </UserContext.Provider>
+    </Suspense>
   );
 }
 
