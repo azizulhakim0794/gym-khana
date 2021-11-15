@@ -46,7 +46,7 @@ const HomeFooter = () => {
                     <div>
                     <br />
                     <br /><br />
-                    <p className="text-center"><small>Copyright By <a href="https://azizulhakim.netlify.app" target="blank">Tamzid</a> in {new Date().getFullYear()}</small></p>
+                    <p className="text-center"><small>Copyright By <a href="https://azizul-hakim01.firebaseapp.com" target="blank">Tamzid</a> in {new Date().getFullYear()}</small></p>
                     </div>
                 </div>
             </div>
